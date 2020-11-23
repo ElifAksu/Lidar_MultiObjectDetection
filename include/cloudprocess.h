@@ -40,7 +40,7 @@
 #include "../include/ground_removal.h"
 #include "../include/component_clustering.h"
 #include "../include/box_fitting.h"
-#include "../include/immukf.h"
+
 #include "../include/rviz_visualizer.h"
 #include "std_msgs/UInt32.h"
 
