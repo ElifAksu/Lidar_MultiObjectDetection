@@ -1,0 +1,16 @@
+<launch>
+<!---<node pkg="rosbag" type="play" name="player1" output="screen" args="/home/ubuntu4/KasimTestData/sec1_2019-11-07-11-34-42.bag"/> -->
+<!---<include file="$(find velodyne_pointcloud)/launch/VLP16_points_multi.launch">
+</include>-->
+  <node pkg="tf" type="static_transform_publisher" name="vehicle" args="0.02 1.33 0.0 0.1745 0.0 0.0  /vehicle_frame /velodyne_2 100"/>
+ <node pkg="tf" type="static_transform_publisher" name="vehicle_2" args="0.02 -1.33 0.0 -0.1745 0.0 0.0  /vehicle_frame /velodyne_1 100"/>
+<node pkg="object_tracking" type="transformMerge" name="transformMerge" />
+
+
+<!---<param name="/use_sime_time" value="true"/>-->
+<node pkg="object_tracking" type="detection" name="detection" output="screen"  />
+
+
+
+<!---<node pkg="rosbag" type="record" name="recorder" output="screen" args="-o /home/ubuntu4/KasimTestData/ComparisonDataset/sec1_merge /Objects_merge /gps_messages"/>-->
+</launch>

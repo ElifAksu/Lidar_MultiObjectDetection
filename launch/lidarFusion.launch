@@ -1,0 +1,11 @@
+<launch>
+
+
+
+  <include file="$(find object_tracking)/launch/merge_detection.launch">
+  </include>
+  <include file="$(find object_tracking)/launch/tracking.launch"  ns="namespace2">
+  </include>
+
+
+ </launch>

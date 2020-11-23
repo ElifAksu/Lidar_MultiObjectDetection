@@ -1,0 +1,14 @@
+<launch>
+
+   <node pkg="object_tracking" type="detection" name="detection_1" >
+   <param name="topicname" value="/ns1/velodyne_points"/>
+    <param name="publishtopic" value="/Objects1_track"/>
+   <param name="visualizername" value="visualization_marker_1"/> 
+   </node> 
+   <node pkg="object_tracking" type="detection" name="detection_2" >
+   <param name="topicname" value="/ns2/velodyne_points"/>
+   <param name="publishtopic" value="/Objects2_track"/>
+   <param name="visualizername" value="visualization_marker_2"/>
+   </node> 
+  
+</launch>

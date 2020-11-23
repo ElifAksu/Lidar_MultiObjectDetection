@@ -1,0 +1,6 @@
+<launch>
+<node pkg="object_tracking" type="tracking_node" name="tracking_node" output="screen">
+
+</node>
+<!---<node pkg="rosbag" type="record" name="recorder" output="screen" args="-o /home/ubuntu4/KasimTestData/ComparisonDataset/sec1_merge /Objects_merge /gps_messages"/>-->
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+<!---<node pkg="rosbag" type="play" name="player1" output="screen" args="/home/ubuntu4/KasimTestData/sec1_2019-11-07-11-34-42.bag"/> -->
+
+  <node pkg="objectdetection" type="main_detection" name="main_detection" output="screen">
+    <param name="pointname" value="/velodyne_points" />
+    <param name="framename" value="/velodyne"/>
+    <param name="tracking_selection" value="0" /> 
+    
+  </node>
+
+<!---<node pkg="rosbag" type="record" name="recorder" output="screen" args="-o /home/ubuntu4/KasimTestData/ComparisonDataset/sec1_merge /Objects_merge /gps_messages"/>-->
+</launch>
